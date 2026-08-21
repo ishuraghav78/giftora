@@ -7,6 +7,7 @@ import GiftGuide from "../components/GiftGuide";
 import GiftFinder from "../components/GiftFinder";
 import EmotionalStory from "../components/EmotionalStory";
 import BudgetShop from "../components/BudgetShop";
+import Reviews from "../components/Reviews";
 import Personalization from "../components/Personalization";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <GiftFinder />
       <EmotionalStory />
       <BudgetShop />
+      <Reviews />
       <Personalization />
     </main>
   );
