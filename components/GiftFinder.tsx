@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { products } from "../data/products";
 import type { Product } from "../components/ProductCard";
 
@@ -153,9 +154,10 @@ export default function GiftFinder() {
             </h3>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {results.map((product) => (
-                <div
+                <Link
                   key={product.id}
-                  className="rounded-[20px] border border-[#ead8dc] bg-white p-4 text-center shadow-sm"
+                  href={`/product/${product.id}`}
+                  className="block rounded-[20px] border border-[#ead8dc] bg-white p-4 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 >
                   <img
                     src={product.images.lifestyleReveal}
@@ -168,7 +170,7 @@ export default function GiftFinder() {
                   <p className="mt-1 text-sm font-semibold text-[#5d2336]">
                     ₹{product.price.toLocaleString("en-IN")}
                   </p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
