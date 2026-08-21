@@ -42,9 +42,21 @@ export default function Reviews() {
           {reviews.map((review) => (
             <div
               key={review.name}
-              className="rounded-[24px] border border-[#ead8dc] bg-white p-6 shadow-[0_12px_40px_rgba(92,39,54,0.06)]"
+              className="rounded-[24px] border border-[#ead8dc] bg-white p-6 shadow-[0_12px_40px_rgba(92,39,54,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(92,39,54,0.1)]"
             >
-              <div className="flex items-center gap-0.5 text-[#c59a55]">
+              <div className="flex items-center gap-3">
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#6b263b] font-serif text-sm font-semibold text-white">
+                  {review.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-serif text-sm text-[#3f202b]">
+                    {review.name}
+                  </p>
+                  <p className="text-xs text-[#a66a77]">{review.location}</p>
+                </div>
+              </div>
+
+              <div className="mt-4 flex items-center gap-0.5 text-[#c59a55]">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <span
                     key={index}
@@ -55,14 +67,9 @@ export default function Reviews() {
                 ))}
               </div>
 
-              <p className="mt-4 text-sm leading-6 text-[#4a333c]">
+              <p className="mt-3 text-sm leading-6 text-[#4a333c]">
                 &ldquo;{review.text}&rdquo;
               </p>
-
-              <p className="mt-5 font-serif text-sm text-[#3f202b]">
-                {review.name}
-              </p>
-              <p className="text-xs text-[#a66a77]">{review.location}</p>
             </div>
           ))}
         </div>
