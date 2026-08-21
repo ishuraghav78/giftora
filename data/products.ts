@@ -14,17 +14,17 @@ export const products: Product[] = [
       "A beautifully packed birthday surprise filled with sweet little moments, thoughtful keepsakes and celebration-ready details.",
     images: {
       closedBox:
-        "https://placehold.co/900x1125/F4DDE2/5D2336?text=Birthday+Pink+Surprise+Box%0A%0A01+Closed+Box",
+        "https://images.pexels.com/photos/6045704/pexels-photo-6045704.jpeg?auto=compress&cs=tinysrgb&w=800",
       openingBox:
-        "https://placehold.co/900x1125/F1D8DE/5D2336?text=Birthday+Pink+Surprise+Box%0A%0A02+Opening+Box",
+        "https://images.pexels.com/photos/5486829/pexels-photo-5486829.jpeg?auto=compress&cs=tinysrgb&w=800",
       firstReveal:
-        "https://placehold.co/900x1125/F6E4E7/5D2336?text=Birthday+Pink+Surprise+Box%0A%0A03+First+Reveal",
+        "https://images.pexels.com/photos/4397903/pexels-photo-4397903.jpeg?auto=compress&cs=tinysrgb&w=800",
       fullyOpened:
-        "https://placehold.co/900x1125/F2D5DC/5D2336?text=Birthday+Pink+Surprise+Box%0A%0A04+Fully+Opened",
+        "https://images.pexels.com/photos/18579833/pexels-photo-18579833.jpeg?auto=compress&cs=tinysrgb&w=800",
       contentsCloseup:
-        "https://placehold.co/900x1125/F7E8EA/5D2336?text=Birthday+Pink+Surprise+Box%0A%0A05+Contents+Closeup",
+        "https://images.pexels.com/photos/13831901/pexels-photo-13831901.jpeg?auto=compress&cs=tinysrgb&w=800",
       lifestyleReveal:
-        "https://placehold.co/900x1125/F0D3DA/5D2336?text=Birthday+Pink+Surprise+Box%0A%0A06+Lifestyle+Reveal",
+        "https://images.pexels.com/photos/7410461/pexels-photo-7410461.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     customizable: true,
     stockStatus: "In Stock",
@@ -48,17 +48,17 @@ export const products: Product[] = [
       "A romantic surprise box designed for meaningful moments, sweet memories and little gestures of love.",
     images: {
       closedBox:
-        "https://placehold.co/900x1125/EADFE0/5D2336?text=Romantic+Couple+Surprise+Box%0A%0A01+Closed+Box",
+        "https://images.pexels.com/photos/6102143/pexels-photo-6102143.jpeg?auto=compress&cs=tinysrgb&w=800",
       openingBox:
-        "https://placehold.co/900x1125/E6D8DA/5D2336?text=Romantic+Couple+Surprise+Box%0A%0A02+Opening+Box",
+        "https://images.pexels.com/photos/8014845/pexels-photo-8014845.jpeg?auto=compress&cs=tinysrgb&w=800",
       firstReveal:
-        "https://placehold.co/900x1125/F0E4E5/5D2336?text=Romantic+Couple+Surprise+Box%0A%0A03+First+Reveal",
+        "https://images.pexels.com/photos/697224/pexels-photo-697224.jpeg?auto=compress&cs=tinysrgb&w=800",
       fullyOpened:
-        "https://placehold.co/900x1125/E5D3D6/5D2336?text=Romantic+Couple+Surprise+Box%0A%0A04+Fully+Opened",
+        "https://images.pexels.com/photos/30592535/pexels-photo-30592535.jpeg?auto=compress&cs=tinysrgb&w=800",
       contentsCloseup:
-        "https://placehold.co/900x1125/F2E8E8/5D2336?text=Romantic+Couple+Surprise+Box%0A%0A05+Contents+Closeup",
+        "https://images.pexels.com/photos/13831901/pexels-photo-13831901.jpeg?auto=compress&cs=tinysrgb&w=800",
       lifestyleReveal:
-        "https://placehold.co/900x1125/E4D0D4/5D2336?text=Romantic+Couple+Surprise+Box%0A%0A06+Lifestyle+Reveal",
+        "https://images.pexels.com/photos/18579833/pexels-photo-18579833.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     customizable: true,
     stockStatus: "In Stock",
@@ -82,17 +82,17 @@ export const products: Product[] = [
       "A calming self-care collection filled with thoughtful little luxuries for a warm and relaxing gifting moment.",
     images: {
       closedBox:
-        "https://placehold.co/900x1125/E8E1D8/5D2336?text=Self-Care+Gift+Box%0A%0A01+Closed+Box",
+        "https://images.pexels.com/photos/4397879/pexels-photo-4397879.jpeg?auto=compress&cs=tinysrgb&w=800",
       openingBox:
-        "https://placehold.co/900x1125/E5DDD4/5D2336?text=Self-Care+Gift+Box%0A%0A02+Opening+Box",
+        "https://images.pexels.com/photos/3927238/pexels-photo-3927238.jpeg?auto=compress&cs=tinysrgb&w=800",
       firstReveal:
-        "https://placehold.co/900x1125/F0EBE4/5D2336?text=Self-Care+Gift+Box%0A%0A03+First+Reveal",
+        "https://images.pexels.com/photos/31552021/pexels-photo-31552021.jpeg?auto=compress&cs=tinysrgb&w=800",
       fullyOpened:
-        "https://placehold.co/900x1125/E3D9CC/5D2336?text=Self-Care+Gift+Box%0A%0A04+Fully+Opened",
+        "https://images.pexels.com/photos/34939732/pexels-photo-34939732.jpeg?auto=compress&cs=tinysrgb&w=800",
       contentsCloseup:
-        "https://placehold.co/900x1125/F2EEE8/5D2336?text=Self-Care+Gift+Box%0A%0A05+Contents+Closeup",
+        "https://images.pexels.com/photos/3993398/pexels-photo-3993398.jpeg?auto=compress&cs=tinysrgb&w=800",
       lifestyleReveal:
-        "https://placehold.co/900x1125/E1D5C8/5D2336?text=Self-Care+Gift+Box%0A%0A06+Lifestyle+Reveal",
+        "https://images.pexels.com/photos/31552021/pexels-photo-31552021.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     customizable: true,
     stockStatus: "In Stock",
@@ -116,17 +116,17 @@ export const products: Product[] = [
       "A cheerful birthday box featuring a cute teddy, sweet treats and celebration details made for a memorable surprise.",
     images: {
       closedBox:
-        "https://placehold.co/900x1125/F2DDD5/5D2336?text=Birthday+Teddy+Gift+Box%0A%0A01+Closed+Box",
+        "https://images.pexels.com/photos/697224/pexels-photo-697224.jpeg?auto=compress&cs=tinysrgb&w=800",
       openingBox:
-        "https://placehold.co/900x1125/F0D8D0/5D2336?text=Birthday+Teddy+Gift+Box%0A%0A02+Opening+Box",
+        "https://images.pexels.com/photos/5486829/pexels-photo-5486829.jpeg?auto=compress&cs=tinysrgb&w=800",
       firstReveal:
-        "https://placehold.co/900x1125/F7E6E0/5D2336?text=Birthday+Teddy+Gift+Box%0A%0A03+First+Reveal",
+        "https://images.pexels.com/photos/8014845/pexels-photo-8014845.jpeg?auto=compress&cs=tinysrgb&w=800",
       fullyOpened:
-        "https://placehold.co/900x1125/EFD3CA/5D2336?text=Birthday+Teddy+Gift+Box%0A%0A04+Fully+Opened",
+        "https://images.pexels.com/photos/30592535/pexels-photo-30592535.jpeg?auto=compress&cs=tinysrgb&w=800",
       contentsCloseup:
-        "https://placehold.co/900x1125/F8EAE5/5D2336?text=Birthday+Teddy+Gift+Box%0A%0A05+Contents+Closeup",
+        "https://images.pexels.com/photos/18579833/pexels-photo-18579833.jpeg?auto=compress&cs=tinysrgb&w=800",
       lifestyleReveal:
-        "https://placehold.co/900x1125/ECCFC5/5D2336?text=Birthday+Teddy+Gift+Box%0A%0A06+Lifestyle+Reveal",
+        "https://images.pexels.com/photos/7410461/pexels-photo-7410461.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     customizable: true,
     stockStatus: "In Stock",
