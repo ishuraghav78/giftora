@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import TrustSection from "../components/TrustSection";
 import OccasionGrid from "../components/OccasionGrid";
 import ProductCollection from "../components/ProductCollection";
 import GiftGuide from "../components/GiftGuide";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#fffaf8] text-[#3f202b]">
       <Navbar />
       <Hero />
+      <TrustSection />
       <OccasionGrid />
       <ProductCollection />
       <GiftGuide />
