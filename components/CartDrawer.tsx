@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCart } from "../context/CartContext";
 
 export default function CartDrawer() {
@@ -144,12 +145,13 @@ export default function CartDrawer() {
               🎁 Your gift is almost ready!
             </p>
 
-            <button
-              type="button"
-              className="mt-4 w-full rounded-full bg-[#6b263b] px-5 py-3.5 text-xs font-semibold tracking-[0.14em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#572031] hover:shadow-lg"
+            <Link
+              href="/checkout"
+              onClick={closeCart}
+              className="mt-4 block w-full rounded-full bg-[#6b263b] px-5 py-3.5 text-center text-xs font-semibold tracking-[0.14em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#572031] hover:shadow-lg"
             >
               PROCEED TO CHECKOUT
-            </button>
+            </Link>
           </div>
         )}
       </div>
