@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { products, type Product } from "../data/products";
+import { products } from "../data/products";
+import type { Product } from "../components/ProductCard";
 
 const whoOptions = ["Her", "Him", "Partner", "Friend", "Parents", "Family"];
 const occasionOptions = [
