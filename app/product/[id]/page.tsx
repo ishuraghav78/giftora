@@ -3,13 +3,14 @@ import { products } from "../../../data/products";
 import ProductDetailClient from "../../../components/ProductDetailClient";
 
 type ProductPageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = products.find((item) => item.id === params.id);
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { id } = await params;
+  const product = products.find((item) => item.id === id);
 
   if (!product) {
     notFound();
