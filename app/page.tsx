@@ -9,6 +9,7 @@ import EmotionalStory from "../components/EmotionalStory";
 import BudgetShop from "../components/BudgetShop";
 import Reviews from "../components/Reviews";
 import InstagramGallery from "../components/InstagramGallery";
+import FAQ from "../components/FAQ";
 import Personalization from "../components/Personalization";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <BudgetShop />
       <Reviews />
       <InstagramGallery />
+      <FAQ />
       <Personalization />
     </main>
   );
