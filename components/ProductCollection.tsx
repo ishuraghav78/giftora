@@ -10,10 +10,56 @@ export default function ProductCollection() {
   const { addToCart } = useCart();
 
   const categories = [
-    "All",
-    "Birthday",
-    "Couple",
-    "Self-Care",
+    {
+      label: "All",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      ),
+    },
+    {
+      label: "Birthday",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 20v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7H4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M4 16h16" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M12 11V6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M12 6c-1 0-1.5-1-1-2s1.5-1 1-2c1 0 1.5 1 1 2s-1.5 1-1 2z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        </svg>
+      ),
+    },
+    {
+      label: "Couple",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 20s-7-4.35-9.5-8.5C.9 8.2 2.6 5 6 5c2 0 3.3 1 4 2 .7-1 2-2 4-2 3.4 0 5.1 3.2 3.5 6.5C19 15.65 12 20 12 20z"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
+    },
+    {
+      label: "Self-Care",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 4c1.5 2 4 3 4 6a4 4 0 1 1-8 0c0-3 2.5-4 4-6z"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinejoin="round"
+          />
+          <path d="M12 14v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M9 20h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      ),
+    },
   ];
 
   const filteredProducts =
@@ -57,20 +103,21 @@ export default function ProductCollection() {
         <div className="mt-8 flex justify-center overflow-x-auto pb-2">
           <div className="flex min-w-max items-center gap-2 rounded-full border border-[#ead8dc] bg-[#fdf3f4] p-1.5">
             {categories.map((category) => {
-              const isActive = activeCategory === category;
+              const isActive = activeCategory === category.label;
 
               return (
                 <button
-                  key={category}
+                  key={category.label}
                   type="button"
-                  onClick={() => setActiveCategory(category)}
-                  className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all duration-300 ${
+                  onClick={() => setActiveCategory(category.label)}
+                  className={`flex items-center gap-1.5 rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all duration-300 [&>svg]:h-4 [&>svg]:w-4 ${
                     isActive
                       ? "bg-[#6b263b] text-white shadow-sm"
                       : "text-[#6b263b] hover:bg-white"
                   }`}
                 >
-                  {category}
+                  {category.icon}
+                  {category.label}
                 </button>
               );
             })}
