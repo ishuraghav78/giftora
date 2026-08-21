@@ -20,6 +20,33 @@ const budgetOptions = [
   { label: "₹2,000+", min: 2000, max: Infinity },
 ];
 
+const groupIcons: Record<string, React.ReactNode> = {
+  Who: (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  ),
+  Occasion: (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="6" width="16" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M4 10h16" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M8 4v4M16 4v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  ),
+  Budget: (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3.5" y="6.5" width="17" height="11" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="12" cy="12" r="2.3" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  ),
+};
+
 function PillGroup({
   title,
   options,
@@ -33,9 +60,12 @@ function PillGroup({
 }) {
   return (
     <div>
-      <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a66a77]">
-        {title}
-      </p>
+      <div className="mb-3 flex items-center gap-1.5 text-[#a66a77] [&>svg]:h-4 [&>svg]:w-4">
+        {groupIcons[title]}
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em]">
+          {title}
+        </p>
+      </div>
       <div className="flex flex-wrap gap-2">
         {options.map((option) => {
           const isActive = selected === option;
