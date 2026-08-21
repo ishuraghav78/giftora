@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import OccasionGrid from "../components/OccasionGrid";
 import ProductCollection from "../components/ProductCollection";
 import GiftFinder from "../components/GiftFinder";
+import EmotionalStory from "../components/EmotionalStory";
 import Personalization from "../components/Personalization";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <OccasionGrid />
       <ProductCollection />
       <GiftFinder />
+      <EmotionalStory />
       <Personalization />
     </main>
   );
