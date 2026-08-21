@@ -4,6 +4,7 @@ import OccasionGrid from "../components/OccasionGrid";
 import ProductCollection from "../components/ProductCollection";
 import GiftFinder from "../components/GiftFinder";
 import EmotionalStory from "../components/EmotionalStory";
+import BudgetShop from "../components/BudgetShop";
 import Personalization from "../components/Personalization";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <ProductCollection />
       <GiftFinder />
       <EmotionalStory />
+      <BudgetShop />
       <Personalization />
     </main>
   );
