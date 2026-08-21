@@ -185,7 +185,7 @@ export default function ProductCard({
   return (
     <Link
       href={`/product/${product.id}`}
-      className="group relative block w-full overflow-hidden rounded-[24px] border border-[#ead8dc] bg-[#fffaf8] shadow-[0_12px_40px_rgba(92,39,54,0.08)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(92,39,54,0.14)]"
+      className="group relative block w-full overflow-hidden rounded-[24px] border-[1.5px] border-[#e0bcc3] bg-[#fffaf8] shadow-[0_12px_40px_rgba(92,39,54,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#c9909e] hover:shadow-[0_20px_55px_rgba(92,39,54,0.14)]"
     >
       <article>
       {/* PRODUCT IMAGE AREA */}
