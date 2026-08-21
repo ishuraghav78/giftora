@@ -30,6 +30,7 @@ export default function CartDrawer() {
         className={`fixed right-0 top-0 z-50 flex h-full w-full max-w-md flex-col bg-[#fffaf8] shadow-2xl transition-transform duration-500 ease-out ${
           isCartOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[#ead8dc] px-5 py-5">
