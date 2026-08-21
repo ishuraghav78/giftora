@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { cartCount, openCart } = useCart();
+  const { wishlistCount } = useWishlist();
 
   return (
     <>
@@ -45,9 +48,9 @@ export default function Navbar() {
               ⌕
             </button>
 
-            <button aria-label="Wishlist" className="nav-icon">
-              ♡
-            </button>
+            <Link href="/wishlist" aria-label="Wishlist" className="nav-cart">
+              ♡{wishlistCount > 0 && <span>{wishlistCount}</span>}
+            </Link>
 
             <button
               aria-label="Cart"
@@ -173,6 +176,7 @@ export default function Navbar() {
           align-items: center;
           justify-content: center;
           transition: transform 180ms ease;
+          text-decoration: none;
         }
 
         .nav-icon {
