@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import OccasionGrid from "../components/OccasionGrid";
 import ProductCollection from "../components/ProductCollection";
+import GiftGuide from "../components/GiftGuide";
 import GiftFinder from "../components/GiftFinder";
 import EmotionalStory from "../components/EmotionalStory";
 import BudgetShop from "../components/BudgetShop";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <OccasionGrid />
       <ProductCollection />
+      <GiftGuide />
       <GiftFinder />
       <EmotionalStory />
       <BudgetShop />
