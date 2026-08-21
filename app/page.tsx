@@ -8,6 +8,7 @@ import GiftFinder from "../components/GiftFinder";
 import EmotionalStory from "../components/EmotionalStory";
 import BudgetShop from "../components/BudgetShop";
 import Reviews from "../components/Reviews";
+import InstagramGallery from "../components/InstagramGallery";
 import Personalization from "../components/Personalization";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <EmotionalStory />
       <BudgetShop />
       <Reviews />
+      <InstagramGallery />
       <Personalization />
     </main>
   );
