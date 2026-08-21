@@ -12,6 +12,10 @@ export default function Navbar() {
 
   return (
     <>
+      <div className="announcement-bar">
+        🎁 Thoughtfully Packed &nbsp;•&nbsp; Beautifully Delivered &nbsp;•&nbsp; Made With Love
+      </div>
+
       <nav className="navbar">
         <div className="nav-inner">
 
@@ -96,6 +100,17 @@ export default function Navbar() {
       </nav>
 
       <style jsx>{`
+        .announcement-bar {
+          width: 100%;
+          background: #3f202b;
+          color: #f3d9c4;
+          text-align: center;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+          padding: 8px 12px;
+        }
+
         .navbar {
           position: sticky;
           top: 0;
@@ -237,6 +252,11 @@ export default function Navbar() {
         }
 
         @media (max-width: 900px) {
+          .announcement-bar {
+            font-size: 10px;
+            padding: 7px 10px;
+          }
+
           .desktop-nav {
             display: none;
           }
