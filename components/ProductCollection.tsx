@@ -3,9 +3,11 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 import { products } from "../data/products";
+import { useCart } from "../context/CartContext";
 
 export default function ProductCollection() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const { addToCart } = useCart();
 
   const categories = [
     "All",
@@ -24,7 +26,7 @@ export default function ProductCollection() {
         );
 
   const handleAddToCart = (product: (typeof products)[number]) => {
-    console.log("Added to cart:", product.name);
+    addToCart(product);
   };
 
   const handleQuickView = (product: (typeof products)[number]) => {
@@ -37,7 +39,6 @@ export default function ProductCollection() {
       className="bg-[#fffaf8] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
-        {/* Section heading */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#a66a77]">
             Curated With Love
@@ -53,7 +54,6 @@ export default function ProductCollection() {
           </p>
         </div>
 
-        {/* Category filters */}
         <div className="mt-8 flex justify-center overflow-x-auto pb-2">
           <div className="flex min-w-max items-center gap-2 rounded-full border border-[#ead8dc] bg-[#fdf3f4] p-1.5">
             {categories.map((category) => {
@@ -77,7 +77,6 @@ export default function ProductCollection() {
           </div>
         </div>
 
-        {/* Product grid */}
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
           {filteredProducts.map((product) => (
             <ProductCard
@@ -89,7 +88,6 @@ export default function ProductCollection() {
           ))}
         </div>
 
-        {/* Empty state */}
         {filteredProducts.length === 0 && (
           <div className="py-16 text-center">
             <p className="font-serif text-2xl text-[#3f202b]">
@@ -102,7 +100,6 @@ export default function ProductCollection() {
           </div>
         )}
 
-        {/* Bottom CTA */}
         <div className="mt-12 text-center">
           <button
             type="button"
