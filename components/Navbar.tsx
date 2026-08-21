@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useCart } from "../context/CartContext";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { cartCount, openCart } = useCart();
 
   return (
     <>
@@ -47,8 +49,13 @@ export default function Navbar() {
               ♡
             </button>
 
-            <button aria-label="Cart" className="nav-cart">
-              🛒 <span>0</span>
+            <button
+              aria-label="Cart"
+              className="nav-cart"
+              onClick={openCart}
+              type="button"
+            >
+              🛒 <span>{cartCount}</span>
             </button>
           </div>
         </div>
@@ -180,6 +187,7 @@ export default function Navbar() {
           padding: 0 10px;
           gap: 4px;
           font-size: 15px;
+          cursor: pointer;
         }
 
         .nav-cart span {
