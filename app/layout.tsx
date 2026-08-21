@@ -4,6 +4,7 @@ import { CartProvider } from "../context/CartContext";
 import { WishlistProvider } from "../context/WishlistContext";
 import CartDrawer from "../components/CartDrawer";
 import Footer from "../components/Footer";
+import BottomNav from "../components/BottomNav";
 
 export const metadata: Metadata = {
   title: "GIFTORA — Make Every Moment Gift-Worthy.",
@@ -18,12 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="pb-16 md:pb-0">
         <WishlistProvider>
           <CartProvider>
             {children}
             <Footer />
             <CartDrawer />
+            <BottomNav />
           </CartProvider>
         </WishlistProvider>
       </body>
