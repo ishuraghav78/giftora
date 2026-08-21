@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { useWishlist } from "../context/WishlistContext";
 
 export type ProductImageSet = {
   closedBox: string;
@@ -45,6 +46,9 @@ export default function ProductCard({
   onAddToCart,
   onQuickView,
 }: ProductCardProps) {
+  const { toggleWishlist, isWishlisted } = useWishlist();
+  const wishlisted = isWishlisted(product.id);
+
   const images = [
     product.images.closedBox,
     product.images.openingBox,
@@ -66,7 +70,6 @@ export default function ProductCard({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const [isWishlisted, setIsWishlisted] = useState(false);
 
   const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const touchStartX = useRef<number | null>(null);
@@ -223,21 +226,21 @@ export default function ProductCard({
         <button
           type="button"
           aria-label={
-            isWishlisted ? "Remove from wishlist" : "Add to wishlist"
+            wishlisted ? "Remove from wishlist" : "Add to wishlist"
           }
-          aria-pressed={isWishlisted}
+          aria-pressed={wishlisted}
           onClick={(event) => {
             event.stopPropagation();
             event.preventDefault();
-            setIsWishlisted((previous) => !previous);
+            toggleWishlist(product);
           }}
           className={`absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border bg-white/90 text-xl shadow-md backdrop-blur-sm transition-all duration-300 hover:scale-110 ${
-            isWishlisted
+            wishlisted
               ? "border-[#d9a1ad] text-[#9a3652]"
               : "border-white/70 text-[#6b263b]"
           }`}
         >
-          {isWishlisted ? "♥" : "♡"}
+          {wishlisted ? "♥" : "♡"}
         </button>
 
         {/* Image number */}
