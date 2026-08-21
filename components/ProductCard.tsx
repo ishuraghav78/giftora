@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export type ProductImageSet = {
@@ -154,13 +155,17 @@ export default function ProductCard({
     }
   };
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    event.preventDefault();
     if (onAddToCart) {
       onAddToCart(product);
     }
   };
 
-  const handleQuickView = () => {
+  const handleQuickView = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    event.preventDefault();
     if (onQuickView) {
       onQuickView(product);
     }
@@ -175,7 +180,11 @@ export default function ProductCard({
         : null;
 
   return (
-    <article className="group relative w-full overflow-hidden rounded-[24px] border border-[#ead8dc] bg-[#fffaf8] shadow-[0_12px_40px_rgba(92,39,54,0.08)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(92,39,54,0.14)]">
+    <Link
+      href={`/product/${product.id}`}
+      className="group relative block w-full overflow-hidden rounded-[24px] border border-[#ead8dc] bg-[#fffaf8] shadow-[0_12px_40px_rgba(92,39,54,0.08)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(92,39,54,0.14)]"
+    >
+      <article>
       {/* PRODUCT IMAGE AREA */}
       <div
         className="relative aspect-[4/5] overflow-hidden bg-[#f7e8eb]"
@@ -217,7 +226,11 @@ export default function ProductCard({
             isWishlisted ? "Remove from wishlist" : "Add to wishlist"
           }
           aria-pressed={isWishlisted}
-          onClick={() => setIsWishlisted((previous) => !previous)}
+          onClick={(event) => {
+            event.stopPropagation();
+            event.preventDefault();
+            setIsWishlisted((previous) => !previous);
+          }}
           className={`absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border bg-white/90 text-xl shadow-md backdrop-blur-sm transition-all duration-300 hover:scale-110 ${
             isWishlisted
               ? "border-[#d9a1ad] text-[#9a3652]"
@@ -244,6 +257,7 @@ export default function ProductCard({
             aria-label="Previous product image"
             onClick={(event) => {
               event.stopPropagation();
+              event.preventDefault();
               temporarilyPauseCarousel();
               goToPreviousImage();
             }}
@@ -257,6 +271,7 @@ export default function ProductCard({
             aria-label="Next product image"
             onClick={(event) => {
               event.stopPropagation();
+              event.preventDefault();
               temporarilyPauseCarousel();
               goToNextImage();
             }}
@@ -276,6 +291,7 @@ export default function ProductCard({
               aria-current={index === currentImageIndex}
               onClick={(event) => {
                 event.stopPropagation();
+                event.preventDefault();
                 goToImage(index);
               }}
               className={`h-1.5 rounded-full transition-all duration-300 ${
@@ -357,7 +373,8 @@ export default function ProductCard({
           </button>
         </div>
       </div>
-    </article>
+      </article>
+    </Link>
   );
 }
 
