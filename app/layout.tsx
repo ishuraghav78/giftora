@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "../context/CartContext";
+import CartDrawer from "../components/CartDrawer";
 
 export const metadata: Metadata = {
   title: "GIFTORA — Make Every Moment Gift-Worthy.",
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CartProvider>{children}</CartProvider>
+        <CartProvider>
+          {children}
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );
